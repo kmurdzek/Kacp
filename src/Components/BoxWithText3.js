@@ -19,21 +19,17 @@ export default function BoxWithText() {
       <Grid
         container
         spacing={2}
-        xs={8}
+        xs={12}
         sx={{
-          backgroundColor: "red",
           padding: 0,
           marginBottom: 10,
           paddingBottom: 6,
           paddingLeft: 6,
           paddingRight: 6,
-          borderRadius: "2%",
-          background: "linear-gradient(to bottom , #a1c4fd, #f7ffb6)",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+          borderRadius: "2%"
         }}
       >
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Image
             src={Image1}
             style={{
@@ -43,7 +39,7 @@ export default function BoxWithText() {
             }}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Typography
             variant="h5"
             gutterBottom

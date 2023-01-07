@@ -30,7 +30,7 @@ export default function BoxWithText() {
             South River Robotics Mentor | FRC 4573
           </Typography>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Typography variant="body1" gutterBottom>
             {text}
           </Typography>

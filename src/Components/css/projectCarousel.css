@@ -1,0 +1,11 @@
+@media (max-width: 1000px) {
+  ButtonGroup {
+    display: none;
+  }
+  menu {
+    display: block;
+  }
+}
+button {
+  padding: 20;
+}

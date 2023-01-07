@@ -19,7 +19,7 @@ export default function BoxWithText() {
       <Grid
         container
         spacing={2}
-        xs={8}
+        xs={12}
         sx={{
           padding: 0,
           marginBottom: 10,
@@ -29,7 +29,7 @@ export default function BoxWithText() {
           borderRadius: "2%"
         }}
       >
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Image
             src={Image1}
             style={{
@@ -39,7 +39,7 @@ export default function BoxWithText() {
             }}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Typography
             variant="h5"
             gutterBottom

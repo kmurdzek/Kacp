@@ -3,10 +3,16 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import { Menu, MenuItem } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Container } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import IconButton from "@mui/material/IconButton";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import "./css/projectCarousel.css";
+import ButtonGroupMenu from "./ButtonGroupMenu.js";
+import Stack from "@mui/material/Stack";
 const project = {
   python: [
     {
@@ -95,6 +101,22 @@ const theme = createTheme({
     }
   }
 });
+const options = [
+  "None",
+  "Atria",
+  "Callisto",
+  "Dione",
+  "Ganymede",
+  "Hangouts Call",
+  "Luna",
+  "Oberon",
+  "Phobos",
+  "Pyxis",
+  "Sedna",
+  "Titania",
+  "Triton",
+  "Umbriel"
+];
 export default function ProjectCarousel() {
   const [selected, setSelected] = React.useState(0);
   const [showMore, setShowMore] = React.useState(0);
@@ -141,11 +163,21 @@ export default function ProjectCarousel() {
               marginBottom: 4
             }}
           >
-            <ButtonGroup
-              variant="contained"
-              aria-label="outlined primary button group"
+            <Stack
+              direction="row"
+              spacing={2}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                rowGap: "10px",
+                flexWrap: "wrap",
+                flexDirection: "row"
+              }}
             >
               <Button
+                variant="contained"
+                aria-label="outlined primary button group"
                 selected={selected === 0}
                 onClick={event => handleClick(event, 0)}
                 color={selected === 0 ? "secondary" : "primary"}
@@ -153,6 +185,8 @@ export default function ProjectCarousel() {
                 All
               </Button>
               <Button
+                variant="contained"
+                aria-label="outlined primary button group"
                 selected={selected === 1}
                 onClick={event => handleClick(event, 1)}
                 color={selected === 1 ? "secondary" : "primary"}
@@ -160,6 +194,8 @@ export default function ProjectCarousel() {
                 Python
               </Button>
               <Button
+                variant="contained"
+                aria-label="outlined primary button group"
                 selected={selected === 2}
                 onClick={event => handleClick(event, 2)}
                 color={selected === 2 ? "secondary" : "primary"}
@@ -167,6 +203,8 @@ export default function ProjectCarousel() {
                 Java
               </Button>
               <Button
+                variant="contained"
+                aria-label="outlined primary button group"
                 selected={selected === 3}
                 onClick={event => handleClick(event, 3)}
                 color={selected === 3 ? "secondary" : "primary"}
@@ -174,13 +212,15 @@ export default function ProjectCarousel() {
                 Javascript/React/Node
               </Button>
               <Button
+                variant="contained"
+                aria-label="outlined primary button group"
                 selected={selected === 4}
                 onClick={event => handleClick(event, 4)}
                 color={selected === 4 ? "secondary" : "primary"}
               >
                 C
               </Button>
-            </ButtonGroup>
+            </Stack>
           </Grid>
           {selected === 0 || selected === null
             ? showMore === 0
