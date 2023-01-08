@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kacp/static/css/main.39022fd5.css",
-    "main.js": "/Kacp/static/js/main.b6f675cd.js",
+    "main.css": "/Kacp/static/css/main.5474b90e.css",
+    "main.js": "/Kacp/static/js/main.87b54361.js",
     "static/js/787.28cb0dcd.chunk.js": "/Kacp/static/js/787.28cb0dcd.chunk.js",
     "static/media/ruauto.png": "/Kacp/static/media/ruauto.bb325bbacb96cce7710c.png",
     "static/media/IMG_0305.jpg": "/Kacp/static/media/IMG_0305.f2c0ff31b4b3afe1d8c3.jpg",
@@ -10,12 +10,12 @@
     "static/media/IMG_2241.JPG": "/Kacp/static/media/IMG_2241.57db92878479ada0d64e.JPG",
     "static/media/IMG_5938.jpg": "/Kacp/static/media/IMG_5938.f0ac26d42adc52bba4fc.jpg",
     "index.html": "/Kacp/index.html",
-    "main.39022fd5.css.map": "/Kacp/static/css/main.39022fd5.css.map",
-    "main.b6f675cd.js.map": "/Kacp/static/js/main.b6f675cd.js.map",
+    "main.5474b90e.css.map": "/Kacp/static/css/main.5474b90e.css.map",
+    "main.87b54361.js.map": "/Kacp/static/js/main.87b54361.js.map",
     "787.28cb0dcd.chunk.js.map": "/Kacp/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39022fd5.css",
-    "static/js/main.b6f675cd.js"
+    "static/css/main.5474b90e.css",
+    "static/js/main.87b54361.js"
   ]
 }
