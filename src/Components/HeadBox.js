@@ -20,10 +20,8 @@ export default function HeadBox() {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: 10,
             flexDirection: "column",
             backgroundImage: `url(${Image1})`,
-            borderRadius: "2%",
             backgroundSize: "cover",
             padding: "12%",
             maxHeight: "100%"
@@ -36,7 +34,7 @@ export default function HeadBox() {
               flexGrow: 1,
               justifyContent: "center",
               alignItems: "center",
-              height: 500,
+              height: "auto",
               marginBottom: 2
             }}
           >
@@ -57,12 +55,12 @@ export default function HeadBox() {
               sx={{
                 width: 400,
                 backgroundColor: "rgba(0, 0, 0, 0.6)",
-                opacity: 0.8,
+                opacity: 0.9,
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
                 borderRadius: "2%",
-                padding: "2%",
+                padding: "1%",
                 margin: "auto"
               }}
             >
@@ -73,13 +71,22 @@ export default function HeadBox() {
               </div>
 
               <Typography
-                style={{ color: "white", fontSize: 18 }}
+                style={{
+                  paddingLeft: 20,
+                  paddingRight: 20,
+                  color: "white",
+                  fontSize: 18
+                }}
                 variant="body1"
                 gutterBottom
               >
-                body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quos blanditiis tenetur unde suscipit, quam beatae rerum
-                inventore consectetur,
+                &emsp;&emsp;&emsp;&emsp;I'm a recent graduate from Rutgers
+                University with a Bachelor of Science in Computer Science. As a
+                student, I developed a passion for problem-solving, start-ups,
+                and software development. I'm constantly seeking new challenges
+                and ways to improve my skills, and I'm excited to see where my
+                career will take me. Below you'll find a variety of projects
+                I've worked on and my experience.
               </Typography>
               <Grid
                 item

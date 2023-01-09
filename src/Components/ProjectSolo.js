@@ -11,12 +11,12 @@ export default function ProjectSolo(props) {
       item
       container
       sx={{
-        background: "linear-gradient(to bottom right, #a1c4fd, #f7ffb6)",
+        background: "linear-gradient(to bottom right, #71FACA, #B1CEFF )",
         borderRadius: "2%",
         marginLeft: 3,
         marginBottom: 3,
         maxWidth: 450,
-        maxHeight: 450,
+        maxHeight: "auto",
         boxShadow:
           "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
       }}
@@ -49,7 +49,7 @@ export default function ProjectSolo(props) {
         </Grid>
       </Grid>
       <Grid item>
-        <Button onClick={() => window.open()}>
+        <Button onClick={() => window.open(props.project.url)}>
           <LaunchIcon sx={{ color: "black" }} />
         </Button>
       </Grid>

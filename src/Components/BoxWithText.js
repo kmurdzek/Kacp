@@ -1,45 +1,62 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Image } from "mui-image";
-import { red } from "@mui/material/colors";
 import Image1 from "../static/ruauto.png";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: "black",
+  margin: 20,
+  display: "flex",
+  justifyContent: "center",
+  alignContent: "center",
+  flexDirection: "column"
+}));
+
 export default function BoxWithText() {
   const text =
     "I was a member of the RU Autonomous team during my time at university. RU Autonomous competes in the AUVSI SUAS competition, which simulates search and rescue operations using autonomous drones. The competition presents various challenges for participating teams, including navigating to specific points automatically, capturing images, recognizing targets, working with other systems, and delivering objects through the air. It was a challenging and rewarding experience to be a part of this team and work on developing solutions to these complex problems.";
   return (
-    <div
-      style={{
-        display: "flex",
-        alignContent: "center",
-        flexGrow: 1,
-        justifyContent: "center"
+    <Grid
+      container
+      sx={{
+        padding: 0,
+        marginBottom: 10,
+        paddingBottom: 6,
+        paddingLeft: 6,
+        paddingRight: 6,
+        borderRadius: "2%"
       }}
     >
+      <Grid item sm={6}>
+        <Image
+          src={Image1}
+          style={{
+            width: "100%",
+            height: "auto",
+            borderRadius: "2%",
+            padding: 1
+          }}
+        />
+      </Grid>
       <Grid
-        container
-        spacing={2}
-        xs={12}
+        item
+        sm={6}
         sx={{
-          padding: 0,
-          marginBottom: 10,
-          paddingBottom: 6,
-          paddingLeft: 6,
-          paddingRight: 6,
-          borderRadius: "2%"
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          flexDirection: "column"
         }}
       >
-        <Grid item xs={12} sm={6}>
-          <Image
-            src={Image1}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "2%"
-            }}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
+        <Item>
           <Typography
             variant="h5"
             gutterBottom
@@ -55,16 +72,14 @@ export default function BoxWithText() {
           <Typography
             variant="body1"
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center"
+              display: "flex"
             }}
             gutterBottom
           >
             {text}
           </Typography>
-        </Grid>
+        </Item>
       </Grid>
-    </div>
+    </Grid>
   );
 }

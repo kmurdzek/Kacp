@@ -2,16 +2,10 @@ import ProjectSolo from "./ProjectSolo.js";
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import { Menu, MenuItem } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Container } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "./css/projectCarousel.css";
-import ButtonGroupMenu from "./ButtonGroupMenu.js";
 import Stack from "@mui/material/Stack";
 const project = {
   python: [
@@ -20,7 +14,7 @@ const project = {
       description:
         "Developed multiple variations of the A* search algorithm to find the shortest path through a maze for an agent unaware of the state of the maze aside from its adjacent cells.\n\nConsistently recomputed the path with updated knowledge of the maze to handle blocked cells and optimize the search.",
       techStack: "Python",
-      url: ""
+      url: "https://github.com/kmurdzek/Trajectory-Replanning"
     },
 
     {
@@ -28,28 +22,28 @@ const project = {
       description:
         "Implemented load balancing system for DNS servers, including client, root server (RS), and two DNS servers (TS1 and TS2)\n\nRoot server (RS) implemented recursive query resolution, with the ability to handle responses or errors from TS1 and TS2 and relay them to the client as necessary",
       techStack: "Python",
-      url: ""
+      url: "https://github.com/kmurdzek/LoadBalancingDNS"
     },
     {
       name: "Reliable Data Sender",
       description:
         "Implemented a reliable sender using an unreliable UDP socket\nImplement reliability techniques such as stop and wait and cumulative-ACK-based selective repeat\nTested reliability by ensuring the receiver's version of the file matched the sender's version",
       techStack: "Python",
-      url: ""
+      url: "https://github.com/kmurdzek/ReliableCommunication"
     },
     {
       name: "HTTP Server with Authentication",
       description:
         "Implemented an HTTP server that serves secret user data and authenticates access through user name and password or cookies\nUsed the HTTP protocol and built simple versions of authentication mechanisms to render browser-readable data",
       techStack: "Python",
-      url: ""
+      url: "https://github.com/kmurdzek/HTTPServer"
     },
     {
       name: "Machine Learning Model Design",
       description:
         "Designed and tested three classifiers: Naive Bayes, Perceptron, and MIRA\nUsed scanned handwritten digit images and face images with detected edges as data sets\nmplemented Perceptron algorithm using distinct pixels as features and training model through multiple iterations\nImplemented Naive Bayes algorithm using each pixel as a distinct feature and calculating joint probabilities for test images\nmplemented MIRA algorithm, a modified version of the Perceptron algorithm with improved accuracy, using scaling of features to adjust weights",
       techStack: "Python",
-      url: ""
+      url: "https://github.com/kmurdzek/MachineLearningModels"
     }
   ],
   java: [
@@ -58,14 +52,14 @@ const project = {
       description:
         "Developed an online travel reservation system that leveraged a relational database system to support various operations, including flight booking, schedule management, and user information management.",
       techStack: "java",
-      url: ""
+      url: "https://github.com/kmurdzek/Online-Travel-Reservation-System"
     },
     {
       name: "Stock Analysis App",
       description:
         "Developed a financial application that presents daily trending stocks and enables users to access critical data for informed investment decisions.\nImplemented HTTP protocol and utilized the Yahoo Finance API to request and parse JSON objects, storing and displaying the data in the user interface.",
       techStack: "java",
-      url: ""
+      url: "https://github.com/kmurdzek/AndroidStockAnalyzerApp"
     }
   ],
   c: [
@@ -88,35 +82,18 @@ const project = {
 const theme = createTheme({
   typography: {
     allVariants: {
-      fontFamily: "Space Grotesk, sans-serif",
       textTransform: "none"
     }
   },
   palette: {
     primary: {
-      main: "#a1c4fd"
+      main: "#B1CEFF"
     },
     secondary: {
-      main: "#f7ffb6"
+      main: "#71FACA"
     }
   }
 });
-const options = [
-  "None",
-  "Atria",
-  "Callisto",
-  "Dione",
-  "Ganymede",
-  "Hangouts Call",
-  "Luna",
-  "Oberon",
-  "Phobos",
-  "Pyxis",
-  "Sedna",
-  "Titania",
-  "Triton",
-  "Umbriel"
-];
 export default function ProjectCarousel() {
   const [selected, setSelected] = React.useState(0);
   const [showMore, setShowMore] = React.useState(0);

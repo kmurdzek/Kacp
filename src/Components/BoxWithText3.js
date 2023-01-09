@@ -2,69 +2,107 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Image } from "mui-image";
-import { red } from "@mui/material/colors";
-import Image1 from "../static/codeScreen.png";
-export default function BoxWithText() {
-  const text =
-    "I was a member of the RU Autonomous team during my time at university. RU Autonomous competes in the AUVSI SUAS competition, which simulates search and rescue operations using autonomous drones. The competition presents various challenges for participating teams, including navigating to specific points automatically, capturing images, recognizing targets, working with other systems, and delivering objects through the air. It was a challenging and rewarding experience to be a part of this team and work on developing solutions to these complex problems.";
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignContent: "center",
-        flexGrow: 1,
-        justifyContent: "center"
-      }}
-    >
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import LaunchIcon from "@mui/icons-material/Launch";
+import Button from "@mui/material/Button";
+
+//individual unit control
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#E4F0FF",
+  boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+  ...theme.typography.body2,
+  padding: 20,
+  color: "black",
+  margin: 1,
+  display: "flex",
+  justifyContent: "center",
+  alignContent: "center",
+  flexDirection: "column"
+}));
+
+export default function ProjectImWorkingOn(props) {
+  const imageArr = props.imageArr;
+  const title = props.titleArr[0];
+  const mainText = props.textArr;
+  var url = props.url;
+  var opposite = props.opposite;
+  let imageFunc = imageArr.map(img => {
+    return (
+      <Grid item key={img} sm={6}>
+        <Image
+          src={img}
+          style={{
+            width: "100%",
+            height: "85%",
+            borderRadius: "2%",
+            maxWidth: "700px",
+            maxHeight: "700px"
+          }}
+        />
+      </Grid>
+    );
+  });
+  let textFunc = mainText.map(text => {
+    return (
       <Grid
-        container
-        spacing={2}
-        xs={12}
-        sx={{
-          padding: 0,
-          marginBottom: 10,
-          paddingBottom: 6,
-          paddingLeft: 6,
-          paddingRight: 6,
-          borderRadius: "2%"
+        item
+        key={text}
+        sm={6}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center"
         }}
       >
-        <Grid item xs={12} sm={6}>
-          <Image
-            src={Image1}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "2%"
+        <Item>
+          <Button
+            sx={{
+              marginLeft: "auto",
+              "&:hover": { backgroundColor: "transparent" }
             }}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
+            onClick={() => window.open(url)}
+          >
+            <LaunchIcon sx={{ color: "black" }} />
+          </Button>
           <Typography
             variant="h5"
             gutterBottom
             style={{
               fontWeight: "bold",
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center"
+              textAlign: "center",
+              marginTop: 10
             }}
           >
-            RU Autonomous
+            {title}
           </Typography>
           <Typography
             variant="body1"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center"
-            }}
+            sx={{ whiteSpace: "pre-wrap" }}
             gutterBottom
           >
             {text}
           </Typography>
-        </Grid>
+        </Item>
       </Grid>
-    </div>
+    );
+  });
+  return (
+    //whole unit control
+    <Grid
+      container
+      sx={{
+        background: "linear-gradient(to bottom, #00C3A0, #00D4B4)",
+        padding: 4,
+        marginBottom: 10,
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center"
+      }}
+    >
+      {opposite === 1 ? textFunc : imageFunc}
+
+      {opposite === 1 ? imageFunc : textFunc}
+    </Grid>
   );
 }

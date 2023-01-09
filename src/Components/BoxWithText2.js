@@ -2,60 +2,95 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Image } from "mui-image";
-import { red } from "@mui/material/colors";
-import Image1 from "../static/IMG_5938.jpg";
-import Image2 from "../static/robofront.jpg";
-export default function BoxWithText() {
-  const text =
-    "I was a member of the RU Autonomous team at my university for three years. RU Autonomous competed in the AUVSI SUAS competition, which simulates search and rescue operations using autonomous drones. The competition presents various challenges for participating teams, including navigating to specific points automatically, capturing images, recognizing targets, working with other systems, and delivering objects through the air. It was a challenging and rewarding experience to be a part of this team and work on developing solutions to these complex problems.";
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignContent: "center",
-        justifyContent: "center"
-      }}
-    >
-      <Grid container spacing={2} xs={11} sx={{ padding: 2 }}>
-        <Grid
-          item
-          xs={12}
-          sx={{
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center"
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+
+//individual unit control
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#E4F0FF",
+  boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+  ...theme.typography.body2,
+  padding: 20,
+  color: "black",
+  margin: 1,
+  display: "flex",
+  justifyContent: "center",
+  alignContent: "center",
+  flexDirection: "column"
+}));
+
+export default function BoxWithText(props) {
+  const imageArr = props.imageArr;
+  const title = props.titleArr[0];
+  const mainText = props.textArr;
+  var opposite = props.opposite;
+  let imageFunc = imageArr.map(img => {
+    return (
+      <Grid item key={img} sm={6}>
+        <Image
+          src={img}
+          style={{
+            width: "100%",
+            height: "85%",
+            borderRadius: "2%",
+            maxWidth: "700px",
+            maxHeight: "700px"
           }}
-        >
-          <Typography variant="h5" gutterBottom style={{ fontWeight: "bold" }}>
-            South River Robotics Mentor | FRC 4573
+        />
+      </Grid>
+    );
+  });
+  let textFunc = mainText.map(text => {
+    return (
+      <Grid
+        item
+        key={text}
+        sm={6}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center"
+        }}
+      >
+        <Item>
+          <Typography
+            variant="h5"
+            gutterBottom
+            style={{
+              fontWeight: "bold",
+              textAlign: "center",
+              marginTop: 10
+            }}
+          >
+            {title}
           </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography variant="body1" gutterBottom>
+          <Typography
+            sx={{ whiteSpace: "pre-wrap" }}
+            variant="body1"
+            gutterBottom
+          >
             {text}
           </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Image
-            src={Image2}
-            style={{
-              width: "75%",
-              height: "auto",
-              borderRadius: "2%"
-            }}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <Image
-            src={Image1}
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "2%"
-            }}
-          />
-        </Grid>
+        </Item>
       </Grid>
-    </div>
+    );
+  });
+  return (
+    //whole unit control
+    <Grid
+      container
+      sx={{
+        background: "linear-gradient(to bottom, #00C3A0, #00D4B4)",
+        padding: 4,
+        marginBottom: 10,
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center"
+      }}
+    >
+      {opposite === 1 ? textFunc : imageFunc}
+
+      {opposite === 1 ? imageFunc : textFunc}
+    </Grid>
   );
 }
