@@ -80,13 +80,13 @@ export default function HeadBox() {
                 variant="body1"
                 gutterBottom
               >
-                &emsp;&emsp;&emsp;&emsp;I'm a recent graduate from Rutgers
-                University with a Bachelor of Science in Computer Science. As a
-                student, I developed a passion for problem-solving, start-ups,
-                and software development. I'm constantly seeking new challenges
-                and ways to improve my skills, and I'm excited to see where my
-                career will take me. Below you'll find a variety of projects
-                I've worked on and my experience.
+                &emsp;I'm a recent graduate from Rutgers University with a
+                Bachelor of Science in Computer Science. As a student, I
+                developed a passion for problem-solving, start-ups, and software
+                development. I'm constantly seeking new challenges and ways to
+                improve my skills, and I'm excited to see where my career will
+                take me. Below you'll find a variety of projects I've worked on
+                and my experience.
               </Typography>
               <Grid
                 item

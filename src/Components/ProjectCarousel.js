@@ -51,31 +51,68 @@ const project = {
       name: "Travel Reservation System",
       description:
         "Developed an online travel reservation system that leveraged a relational database system to support various operations, including flight booking, schedule management, and user information management.",
-      techStack: "java",
+      techStack: "Java, MySQL, JSP, Apache Tomcat, JDBC, HTML, CSS",
       url: "https://github.com/kmurdzek/Online-Travel-Reservation-System"
     },
     {
       name: "Stock Analysis App",
       description:
         "Developed a financial application that presents daily trending stocks and enables users to access critical data for informed investment decisions.\nImplemented HTTP protocol and utilized the Yahoo Finance API to request and parse JSON objects, storing and displaying the data in the user interface.",
-      techStack: "java",
+      techStack: "Java, Android Studios",
       url: "https://github.com/kmurdzek/AndroidStockAnalyzerApp"
+    },
+    {
+      name: "Restaurant Ordering System",
+      description:
+        "Point of sale system built using Java to allow for a user to customize select menu options and generate orders and receipts.",
+      techStack: "Java, JavaFX",
+      url: "https://github.com/kmurdzek/RestaurantOrderingSystem"
     }
   ],
   c: [
     {
-      name: "Travel Reservation system",
-      description: "askdsdsa",
-      techStack: "c",
-      url: ""
+      name: "User Level Thread Library",
+      description:
+        " Implemented a Uthreads library for the creation and management of lightweight, user-level threads, improving the performance and scalability of a wide range of applications.\n Developed and implemented advanced scheduling algorithms such as preemptive shortest job first for improved efficiency in thread scheduling.\n Improved flexibility in parallel programming, allowing developers to implement their own scheduling algorithms and thread management strategies.",
+      techStack: "C",
+      url: "https://github.com/scheng/uthreads"
+    },
+    {
+      name: "Write Once File System",
+      description:
+        "Designed and implemented a Write Once File System using a 4MB file, reading and writing the file to and from a buffer on mount and unmount, organized into 1024-byte blocks.\n Designed metadata architecture that includes a super block, inode region, and memory region, containing crucial information such as the position of the inode region and memory region, number of free disk blocks, and size of the file system.\n Implemented file management, reading, and writing to the file by taking input of file descriptor, pointer to buffer, and an integer specifying the number of bytes to read or write to the file. Additionally, it handles large file sizes and uses pnodes that contain pointers to other pnodes or data disk blocks.",
+      techStack: "C",
+      url: "https://github.com/scheng/ufilesys"
+    },
+    {
+      name: "Plagiarism Checker",
+      description:
+        "The algorithm the pthread multithreading library to process the data from files and directories specified by users.\n It tokenizes and builds binary trees of the words in the files, stores file names along with the tree and updates the words' frequencies as they are inserted into the trees.\n It computes the Jensen-Shannon divergence (JSD) between every combination of files by comparing their binary trees, the result is stored in a data structure along with the file names, and the final list of file combinations is sorted by JSD and printed to the terminal in descending order.",
+      techStack: "C",
+      url: "https://github.com/scheng/uthreads"
+    },
+    {
+      name: "Server Communication",
+      description:
+        "The server opens when running a command, followed by a port number. If the port number is already in use, the server will not be able to bind to it.\n The server is capable of handling multiple clients that can send GET, SET, or DEL requests, and it maintains a binary tree of all valid keys and values. The command must be in all caps and followed by an integer that specifies the length of the input including newline characters, and then the input itself. If the input is incorrect in any way, error messages will be sent to the client and the connection will be closed.\n The client that sends the request is granted exclusive access to the binary tree using pthread locks so that there will be no malformed entries when two clients try to access the tree at the same time. The connection with the server can be closed with ctrl + c, incorrect input format will also close the link to the server.",
+      techStack: "C",
+      url: "https://github.com/kmurdzek/ServerCommunication"
     }
   ],
   js: [
     {
-      name: "Travel Reservation system",
-      description: "askdsdsa",
-      techStack: "js",
-      url: ""
+      name: "Simple Shopper",
+      description:
+        "A recipe shopping web app that makes it easier and faster to shop for the ingredients you need. Used the Edamam and Kroger APIs to make it so you can search recipes and make shopping lists that show you where everything is in the store, how much it costs, and its code. And, added a rating system so people can rate and leave reviews on the recipes they make, giving feedback and suggestions to others.",
+      techStack: "Javascript, React.js, Node.js, MySQL, UML",
+      url: "https://github.com/kmurdzek/Simple-Shopper"
+    },
+    {
+      name: "My Personal Website",
+      description:
+        "I made this website to extend my resume so I can showcase some more of my projects and tell a little bit more about myself. Feel free to use my website as a template for your own personal site by forking the Github repository linked. It is still a work in progress but nearly complete!",
+      techStack: "React.Js, MaterialUI",
+      url: "https://github.com/kmurdzek/Kacp"
     }
   ]
 };
