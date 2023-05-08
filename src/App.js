@@ -6,7 +6,7 @@ import ProjectImWorkingOn from "./Components/BoxWithText3";
 import Image2 from "./static/robofront.jpg";
 import Image1 from "./static/IMG_5938.jpg";
 import Image3 from "./static/ruauto.png";
-import Image4 from "./static/codeScreen.png";
+import Image4 from "./static/interviewlab.png";
 import "./App.css";
 function App() {
   const imageArr1 = [Image1, Image2];
@@ -18,8 +18,8 @@ function App() {
   const mainText2 =
     "  I was a member of the RU Autonomous team during my time at university. RU Autonomous competes in the AUVSI SUAS competition, which simulates search and rescue operations using autonomous drones. The competition presents various challenges for participating teams, including navigating to specific points automatically, capturing images, recognizing targets, working with other systems, and delivering objects through the air. It was a challenging and rewarding experience to be a part of this team and work on developing solutions to these complex problems.";
   const mainText3 =
-    "  I'm currently working on a project in Python that utilizes several functions to retrieve and process financial data, as well as train and evaluate a machine learning model for predicting future values.\n\n  The script takes a symbol for a specific financial asset (e.g. a stock, currency, commodity) as inputs, and retrieves historical financial data for that asset from “eodhistoricaldata” API. The retrieved data is then passed through a function which processes the data in some way (e.g. adding technical indicators, normalizing values). The processed data is then split into training and testing sets and used to train a machine learning model to make predictions about the future values of the asset. The model is then evaluated using the testing data.\n\n  This code could be useful for anyone interested in using machine learning techniques to make predictions about financial assets. My current goals for this project are to improve the accuracy of predictions on historical data so I could then apply the model to trade stocks in realtime using a brokerage API.";
-  const title3 = "Stock Price Prediction using EOD Data and TensorFlow";
+    "  Have you ever found yourself anxiously preparing for a job interview, unsure of the questions you might be asked? Or have you faced a HireVue interview, where you're expected to record your responses to questions with just 30 seconds of preparation? Interview Lab Co is here to help you confidently tackle these challenges.\n\n  Our innovative service leverages the power of GPT-4 to generate a customized list of interview questions based on the specific job position you're targeting. But we don't stop there - Interview Lab Co also tailors questions to match your resume and the job posting you're applying for, ensuring a truly personalized experience. \n\n  Once you receive your generated questions, simply record your answers and submit them for feedback. Our platform will then provide insightful and constructive feedback to help you refine your responses and ace that interview. With Interview Lab Co, you'll never feel unprepared for a job interview again.";
+  const title3 = "Interview Lab Co";
   const title2 = "RU Autonomous";
   const textArr1 = [mainText1];
   const titleArr1 = [title1];
@@ -27,8 +27,7 @@ function App() {
   const titleArr2 = [title2];
   const textArr3 = [mainText3];
   const titleArr3 = [title3];
-  var url =
-    "https://github.com/kmurdzek/Stock-Price-Prediction-using-EOD-Data-and-TensorFlow";
+  var url = "https://interviewlabco.com";
   return (
     <div
       style={{

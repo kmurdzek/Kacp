@@ -29,26 +29,37 @@ export default function ProjectImWorkingOn(props) {
   var opposite = props.opposite;
   let imageFunc = imageArr.map(img => {
     return (
-      <Grid item key={img} sm={6}>
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          maxWidth: "100%",
+          maxHeight: "85%"
+        }}
+        key={img}
+        sm={12}
+        md={6}
+      >
         <Image
           src={img}
-          style={{
-            width: "100%",
-            height: "85%",
-            borderRadius: "2%",
-            maxWidth: "700px",
-            maxHeight: "700px"
+          sx={{
+            objectFit: "cover",
+            borderRadius: "2%"
           }}
         />
       </Grid>
     );
   });
+
   let textFunc = mainText.map(text => {
     return (
       <Grid
         item
         key={text}
-        sm={6}
+        sm={12}
+        md={6}
         style={{
           display: "flex",
           justifyContent: "center",
@@ -56,26 +67,46 @@ export default function ProjectImWorkingOn(props) {
         }}
       >
         <Item>
-          <Button
+          <Grid
+            container
             sx={{
-              marginLeft: "auto",
-              "&:hover": { backgroundColor: "transparent" }
-            }}
-            onClick={() => window.open(url)}
-          >
-            <LaunchIcon sx={{ color: "black" }} />
-          </Button>
-          <Typography
-            variant="h5"
-            gutterBottom
-            style={{
-              fontWeight: "bold",
-              textAlign: "center",
-              marginTop: 10
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center"
             }}
           >
-            {title}
-          </Typography>
+            <Grid
+              item
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+              <Typography
+                variant="h5"
+                gutterBottom
+                style={{
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  marginTop: 10
+                }}
+              >
+                {title}
+              </Typography>
+              <Button
+                sx={{
+                  marginLeft: "auto",
+                  "&:hover": { backgroundColor: "transparent" }
+                }}
+                onClick={() => window.open(url)}
+              >
+                <LaunchIcon sx={{ color: "black" }} />
+              </Button>
+            </Grid>
+          </Grid>
           <Typography
             variant="body1"
             sx={{ whiteSpace: "pre-wrap" }}
@@ -89,20 +120,31 @@ export default function ProjectImWorkingOn(props) {
   });
   return (
     //whole unit control
-    <Grid
-      container
-      sx={{
-        background: "linear-gradient(to bottom, #00C3A0, #00D4B4)",
-        padding: 4,
-        marginBottom: 10,
+    <div
+      style={{
         display: "flex",
         justifyContent: "center",
-        alignContent: "center"
+        alignItems: "center",
+        background: "linear-gradient(to bottom, #00C3A0, #00D4B4)",
+        padding: 4,
+        marginBottom: 10
       }}
     >
-      {opposite === 1 ? textFunc : imageFunc}
+      <Grid
+        container
+        spacing={2}
+        margin={4}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          width: "1100px"
+        }}
+      >
+        {opposite === 1 ? textFunc : imageFunc}
 
-      {opposite === 1 ? imageFunc : textFunc}
-    </Grid>
+        {opposite === 1 ? imageFunc : textFunc}
+      </Grid>
+    </div>
   );
 }
