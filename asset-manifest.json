@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Kacp/static/css/main.fbc72a5e.css",
+    "main.js": "/Kacp/static/js/main.8e473a46.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Kacp/static/js/787.28cb0dcd.chunk.js",
+    "static/media/ruauto.png": "/Kacp/static/media/ruauto.bb325bbacb96cce7710c.png",
+    "static/media/IMG_0305.jpg": "/Kacp/static/media/IMG_0305.f2c0ff31b4b3afe1d8c3.jpg",
+    "static/media/robofront.jpg": "/Kacp/static/media/robofront.bc46131024476532650b.jpg",
+    "static/media/interviewlab.png": "/Kacp/static/media/interviewlab.54e089eb05210353c85a.png",
+    "static/media/IMG_2241.JPG": "/Kacp/static/media/IMG_2241.57db92878479ada0d64e.JPG",
+    "static/media/IMG_5938.jpg": "/Kacp/static/media/IMG_5938.f0ac26d42adc52bba4fc.jpg",
+    "index.html": "/Kacp/index.html",
+    "main.fbc72a5e.css.map": "/Kacp/static/css/main.fbc72a5e.css.map",
+    "main.8e473a46.js.map": "/Kacp/static/js/main.8e473a46.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Kacp/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbc72a5e.css",
+    "static/js/main.8e473a46.js"
+  ]
+}
